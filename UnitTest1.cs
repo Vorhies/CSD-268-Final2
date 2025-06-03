@@ -61,7 +61,7 @@ namespace SeleniumTests
             driver.FindElement(By.Id("txtUser")).Clear();
             driver.FindElement(By.Id("txtUser")).SendKeys("test1");
             driver.FindElement(By.Id("txtUser")).SendKeys(Keys.Enter);
-            Assert.AreEqual("", driver.FindElement(By.Id("lblMessage")).Text);
+            Assert.AreEqual("User Login", driver.FindElement(By.XPath("(.//*[normalize-space(text()) and normalize-space(.)='Theme'])[1]/following::h4[1]")).Text);
         }
         private bool IsElementPresent(By by)
         {
